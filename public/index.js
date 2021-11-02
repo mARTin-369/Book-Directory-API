@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000/apis';
+const BASE_URL = 'https://book-directory-api.herokuapp.com/apis';
 let token;
 
 const signUpForm = document.getElementById('sign_up')
