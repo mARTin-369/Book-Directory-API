@@ -1,0 +1,63 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* :root {
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * .9);
+} */
+
+body {
+    margin: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.content {
+    padding-top: 30px;
+}
+
+.endpoints {
+    /* width: 50%; */
+    
+    display: block;
+}
+
+.routes {
+    height: 70vh;
+    border: 1px solid rgba(170, 167, 167, 0.3);
+}
+
+.reqres {
+    /* width: 50%; */
+    display: block;
+    height: 70vh;
+    /* padding-left: 20px; */
+}
+
+/* .response {
+    height: 30vh;
+}
+
+.request {
+    height: 30vh;
+} */
+
+.code_block {
+    height: 30vh;
+    padding: 28px;
+    border: 1px solid rgba(170, 167, 167, 0.3);
+}
+
+#req {
+    padding-top: 28px;
+}
+
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
