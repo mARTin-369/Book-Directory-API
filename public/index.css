@@ -52,7 +52,15 @@ body {
 }
 
 #req {
-    padding-top: 28px;
+    padding-top: 18px;
+}
+
+.btn {
+    display: inline;
+}
+
+.endpoint {
+    display: inline;
 }
 
 pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
