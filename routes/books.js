@@ -14,6 +14,7 @@ router.get('/all', async (req, res) => {
 
   try {
     const books = await Book.find(where)
+    delete books.user_id;
     res.json(books)
   } catch (err) {
     res.status(500).json({ message: err.message })
@@ -24,6 +25,7 @@ router.get('/all', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const book = await Book.findById(req.params.id)
+    delete books.user_id;
     res.json(book)
   } catch (err) {
     res.status(500).json({ message: err.message })
@@ -44,6 +46,7 @@ router.post('/create', authenticateToken, async (req, res) => {
 
   try {
     const newBook = await book.save()
+    delete newBook.user_id;
     res.status(201).json(newBook)
   } catch (err) {
     res.status(400).json({ message: err.message })
@@ -71,6 +74,7 @@ router.post('/:id/update', authenticateToken, async (req, res) => {
 
       try {
         const updatedBook = await book.save()
+        delete updatedBook.user_id;
         res.json(updatedBook)
       } catch (err) {
         console.log(err)
